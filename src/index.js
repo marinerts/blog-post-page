@@ -5,7 +5,7 @@ import App from './App';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Fetch from './components/AllUsers';
-import PostsUser from './components/PostsUser';
+import UserPosts from './components/UserPosts';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -20,18 +20,13 @@ root.render(
       <Routes>
           <Route path="/" exact element={<App/>} />
           <Route path="/users" exact element={<Fetch/>} />
-          <Route path="/users/:id" element={<PostsUser />} />
+          <Route path="/users/:id" element={<UserPosts />} />
       </Routes>
     </Router>
 
   </React.StrictMode>
-  
-
-  
 );
 
-
-  
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
