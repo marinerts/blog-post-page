@@ -57,7 +57,7 @@ function UserPosts() {
       <div>
         {/*<pre>
           {JSON.stringify(postsUser)}
-  </pre>*/}
+        </pre>*/}
         <ul>
           {postsUser !== null && postsUser.map((post) => (
             <li item={post.id} key={post.id}>
@@ -65,10 +65,10 @@ function UserPosts() {
                 {post.title}
               </strong>
               <p>{post.body}</p>
+              
               {selectedPostId === post.id && (
-              // Renderizar comentarios solo si la publicación está seleccionada
-              <Comments postId={post.id} />
-            )}
+                <Comments postId={post.id} />
+              )}
             </li>
           ))}
         </ul>
