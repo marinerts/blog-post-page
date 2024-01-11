@@ -3,12 +3,25 @@ body {
   padding: 0;
   margin: 0;
 }
-.main-content {
+pre {
+  display: flex;
+  white-space: normal;
+}
+.main-content-users {
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: #fff !important;
   padding: 20px;
   justify-items: center;
+}
+.main-content-user {
+  display: block;
+  color: #fff !important;
+  padding: 20px;
+  justify-items: center;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 .bg {
     background-color: #282c34;
@@ -17,13 +30,13 @@ body {
     background-color: #61dafb;
 }
 /*Users*/
-.item-user p{
+.main-content-users .item-user p, .main-content-user .item-user p {
   display: block;
   width: max-content;
   color: #f9f9f9 !important;
   margin-bottom: 2px;
 }
-.item-user {
+.main-content-users .item-user, .main-content-user .item-user {
   background-color: #313131;
   margin-bottom: 40px;
   padding: 10px;
