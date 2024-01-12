@@ -15,14 +15,21 @@ const Fetch = () => {
         });
     }, []);
     return (
-      <div className='blog-post-page'>
-        <div className='main-content-users bg'>
+      <div className='blog-post-page bg'>
+        <h1 className='main-title'>USERS LIST</h1>
+        <div className='main-content-users'>
           
           {users !== null && users.map((user) => (
             <Link to={`/users/${user.id}`} className='item-user' key={user.id}>
-              <span className='icon-user'><FontAwesomeIcon icon="fa-solid fa-user" /></span>
-              <p>{user.name}</p>
-              <p>{user.email}</p>
+              <div className='column-user column-user-1'>
+                <span className='icon-user'><FontAwesomeIcon icon='fa-solid fa-user' /></span>
+              </div>
+              <div className='column-user column-user-2'>
+                <p>{user.name}</p>
+                <p>{user.email}</p>
+              </div>
+              
+              
             </Link>
           ))}
         </div>
